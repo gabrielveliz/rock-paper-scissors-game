@@ -1,0 +1,38 @@
+header{
+  display: flex;
+  justify-content: center;
+}
+.contlogosco{
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  width: 50%;
+  padding: 2rem;
+  border: 2px solid hsl(217, 16%, 45%);
+  border-radius: 1rem;
+}
+.contlogo{
+  display: flex;
+  align-items: center;
+}
+.contscore{
+  display: flex;
+  flex-direction: row-reverse;
+}
+.contscoreor{
+  background-color: white;
+  padding:1.5rem 5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 1rem;
+}
+.scoretitulo{
+  color: hsl(229, 64%, 46%);
+  font-size: 1.6rem;
+  text-transform: uppercase;
+}
+.scorecontador{
+  color: hsl(229, 25%, 31%);
+  font-weight: 700;
+  font-size: 6rem;
+}
