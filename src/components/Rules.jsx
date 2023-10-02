@@ -1,14 +1,15 @@
 import "../styles/Rules.css";
 import cerrar from "../assets/images/icon-close.svg"
 import imgregla from "../assets/images/image-rules.svg"
+import { motion } from "framer-motion"
 
 const Rules = () =>{
 
   return(
   <>
-  <div className="botonrules" role="button" onClick={()=>abrir("flex")}>
+  <motion.div whileHover={{scale: 1.1}} className="botonrules" role="button" onClick={()=>abrir("flex")}>
     <span>Rules</span>
-  </div>
+  </motion.div>
   <Tablero></Tablero> 
   </>);
 

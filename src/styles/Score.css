@@ -36,3 +36,8 @@ header{
   font-weight: 700;
   font-size: 6rem;
 }
+.perdiendo{
+  color: hsl(0, 100%, 33%);
+  font-weight: 700;
+  font-size: 6rem;
+}

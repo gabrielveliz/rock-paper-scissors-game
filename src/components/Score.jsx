@@ -13,7 +13,8 @@ const Score = ({contador}) =>{
         <div className="contscore">
           <div className="contscoreor">
             <span className="scoretitulo">Score</span>
-            <span className="scorecontador">{contador}</span>
+            <span className={
+              contador>=0 ? 'scorecontador' : 'perdiendo'}>{contador}</span>
           </div>
           
         </div>

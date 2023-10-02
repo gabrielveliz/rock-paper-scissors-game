@@ -8,12 +8,12 @@ import Fot from "./components/Fot"
 function App() {
 
   // eslint-disable-next-line no-unused-vars
-  const [contador,setcontador] = useState(12); 
+  const [contador,setContador] = useState(0); 
 
   return (
     <>
     <Score contador={contador} />
-    <Game/>
+    <Game contador={contador} setContador={setContador}/>
     <Rules/>
     <Fot/>
 
