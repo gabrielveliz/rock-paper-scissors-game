@@ -12,6 +12,12 @@
   bottom: 3rem;
   cursor: pointer;
 }
+@media (max-width:500px){
+  .botonrules{
+    right:12rem;
+    bottom: 3rem;
+  }
+}
 .botonrules:hover{
   border: 2px solid hsl(0, 0%, 100%);
   color: hsl(0, 0%, 100%);
@@ -27,8 +33,8 @@
   background-color: hsla(0, 0%, 0%, 0.455);
   align-items: center;
   justify-content: center;
-
 }
+
 .contenedorreglas{
   width: 50rem;
   background-color: white;
@@ -37,17 +43,40 @@
   grid-template-columns: repeat(2,1fr);
   padding: 5rem 4rem;
 }
+@media (max-width:500px){
+  .contenedorreglas{
+    width: 100%;
+    height: 100%;
+    border-radius: 0rem;
+    grid-template-columns: repeat(1,1fr);
+  }
+}
 .conttituloreglas span{
   font-size: 3rem;
   text-transform: uppercase;
   color: hsl(229, 25%, 31%);
   font-weight: 700;
 }
-.contimgcerrar{
-  display: flex;
-  justify-content: right;
-  align-items: center;
-  cursor: pointer;
+@media (max-width:500px){
+  .conttituloreglas{
+    grid-row: 1/2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+    .conttituloreglas span{
+    font-size: 4rem;
+  }
+}
+
+@media (max-width:500px){
+  .contimgcerrar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    grid-row: 3/4;
+  }
 }
 .contimgcerrar img{
   width: 2rem;
@@ -59,4 +88,14 @@
   align-items: center;
   justify-content: center;
   padding-top: 4rem;
+}
+@media (max-width:500px){
+  .contimgreglas{
+    grid-column: 1/3;
+    grid-row: 2/3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 0rem;
+  }
 }

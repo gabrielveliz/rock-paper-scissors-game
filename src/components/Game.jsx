@@ -60,9 +60,10 @@ let decision="";
       if(maquina===3){decision="DRAW";}
       if(maquina===2){ganar()}
     }
-    
-    setMensaje(decision);
+    setTimeout(() => setMensaje(decision), 2000)
 
+
+    
     function perder(){
       decision="YOU LOSE";setTimeout(() => setContador(contador-1) , 2000)
     }
@@ -76,8 +77,9 @@ let decision="";
     document.getElementById("pantallappal").style.display="grid"
     document.getElementById("contjugando").className = 'contjugando';
     document.getElementById("extrival").className = 'fondorival';
-    setColor2({col:"gris",imagen:"no"}) 
-    document.getElementById("centro").style.display="none"
+    setColor2({col:"gris",imagen:"no"});
+    document.getElementById("centro").style.display="none";
+    setMensaje("");
   }
   return(
     <>
@@ -128,8 +130,16 @@ const Jugando = ({color,color2,mensaje,inicio}) =>{
   return(
     <>
     <div id="contjugando" className="contjugando">
-      <div>
+      <div className="sentido">
         <div className="cabec"><span>You Picked</span></div>
+        {mensaje==="YOU WIN"?<div id="ganador" className="circsup">
+        <div className="circcent">
+          <div className="circulinf">
+          </div>
+        </div>
+      </div>:""
+        }
+        
         <div className={color.col+ " circuloext2"}>
           <div className="circuloint2">
             {color.imagen==="no"?"":<img src={color.imagen} alt="icon" />}
@@ -140,8 +150,15 @@ const Jugando = ({color,color2,mensaje,inicio}) =>{
         <div className="contmensaje"><span>{mensaje}</span></div>
         <div className="contbutton"><button onClick={inicio}>PLAY AGAIN</button></div>
       </div>
-      <div>
+      <div  className="sentido">
       <div className="cabec"><span>The House Picked</span></div>
+      {mensaje==="YOU LOSE"?<div id="ganador" className="circsup">
+        <div className="circcent">
+          <div className="circulinf">
+          </div>
+        </div>
+      </div>:""
+        }
       <div className={color2.col+ " circuloext2"}>
           <div id="extrival" className="fondorival">
             {color2.imagen==="no"?"":<img src={color2.imagen} alt="icon" />}

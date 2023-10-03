@@ -10,9 +10,20 @@ header{
   border: 2px solid hsl(217, 16%, 45%);
   border-radius: 1rem;
 }
+@media (max-width:500px){
+  .contlogosco{
+    width: 95%;
+    padding: 1rem;
+  }
+}
 .contlogo{
   display: flex;
   align-items: center;
+}
+@media (max-width:500px){
+  .contlogo img{
+    scale: 0.7;
+  }
 }
 .contscore{
   display: flex;
@@ -25,6 +36,11 @@ header{
   flex-direction: column;
   align-items: center;
   border-radius: 1rem;
+}
+@media (max-width:500px){
+  .contscoreor{
+    padding:1rem 4rem;
+  }
 }
 .scoretitulo{
   color: hsl(229, 64%, 46%);

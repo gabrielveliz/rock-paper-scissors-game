@@ -16,7 +16,6 @@ function App() {
     <Game contador={contador} setContador={setContador}/>
     <Rules/>
     <Fot/>
-
     </>
   )
 }
