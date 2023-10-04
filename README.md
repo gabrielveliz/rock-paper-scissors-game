@@ -1,5 +1,5 @@
 # rock-paper-scissors-game
-###  Este proyeto es un desafio del sitio web "Frontend Mentor", se desarrollo con React js y cuenta con efectos visuales y musica.
+###  Este proyecto es un desafio del sitio web "Frontend Mentor", se desarrollo con React js y cuenta con efectos visuales y musica.
 
 ## Live
 https://rock-paper-scissors-game-rho-ten.vercel.app/
