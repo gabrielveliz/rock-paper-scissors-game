@@ -5,6 +5,7 @@ import Game from "./components/Game"
 import Rules from "./components/Rules"
 import Fot from "./components/Fot"
 
+
 function App() {
 
   // eslint-disable-next-line no-unused-vars
@@ -12,6 +13,7 @@ function App() {
 
   return (
     <>
+    
     <Score contador={contador} />
     <Game contador={contador} setContador={setContador}/>
     <Rules/>

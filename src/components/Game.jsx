@@ -4,6 +4,11 @@ import papel from "../assets/images/icon-paper.svg"
 import tijera from "../assets/images/icon-scissors.svg"
 import { motion } from "framer-motion"
 import { useState } from "react";
+import ReactHowler from 'react-howler'
+import vic from "../assets/sounds/win.mp3"
+import los from "../assets/sounds/loser.mp3"
+import fondo from "../assets/sounds/theme.mp3"
+
 
 // eslint-disable-next-line react/prop-types
 const Game = ({contador,setContador}) =>{
@@ -81,9 +86,29 @@ let decision="";
     document.getElementById("centro").style.display="none";
     setMensaje("");
   }
+
   return(
     <>
-    
+    {
+      mensaje==="YOU LOSE"?<ReactHowler
+      src={los}
+      playing={true}
+      volume={0.2}
+    />:""
+    }
+    {
+      mensaje==="YOU WIN"?<ReactHowler
+      src={vic}
+      playing={true}
+      volume={0.2}
+    />:""
+    }
+    <ReactHowler
+        src={fondo}
+        playing={true}
+        volume={0.1}
+        loop={true}
+      />
     <main className="contenedorgame">
       <motion.div id="pantallappal" className="contenedorppaljuego">
         <div className="ubicaciongrid">
